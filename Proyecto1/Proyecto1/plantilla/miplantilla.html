@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>Hola amigo, esta es mi plantilla</h1>
+        <p>El nombre del profesor es: <strong>{{nombre_persona}} {{apellido_persona}} </strong></p>
+        <p>
+            <ul>
+            {% if lista %} <!--puedo poner un condicionante por si la lista está vacía.  -->
+
+                {% for el_tema in lista %} <!-- puedo hacer un bucle for dentro de la plantilla, con esto abro y luego se cierra con end -->
+
+                    <li>{{el_tema}}</li>
+
+                {% endfor %}
+
+            {% else %}
+                <p>No hay elementos que mostrar</p>
+        
+            {% endif %}
+            </ul>
+
+        </p>
+    </body>
+</html>
+
+<!-- jerarquía u orden de llamadas desde una plantilla (todo con punto)
+1. Diccionario
+2. Atributo
+3. Método
+4. índice de lista -->
